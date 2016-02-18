@@ -1,0 +1,12 @@
+.forms-view
+{
+  ion-content
+  {
+    -webkit-overflow-scrolling: touch !important;
+    overflow: scroll !important;
+  }
+}
+
+.item-input-inset .item-input-wrapper input {
+  width: 100%;
+}

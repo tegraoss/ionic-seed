@@ -1,0 +1,21 @@
+.layouts-view .layouts-functionalities {
+  .item {
+    .icon:first-child {
+      color: $layouts-icon-color;
+    }
+
+    .title {
+      font-weight:500;
+    }
+
+    .description {
+      color: lighten($content-color, 30%);
+    }
+  }
+}
+
+.search {
+  .item, .item-content p {
+    white-space: normal !important;
+  }
+}

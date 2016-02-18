@@ -1,0 +1,23 @@
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  config.vm.box = "ubuntu/trusty32"
+  config.vm.hostname = "ionic-android"
+
+  config.vm.provision :shell, path: "bootstrap.sh"
+  config.vm.provision :shell, path: "init.sh", run: "always"
+
+  config.vm.network "forwarded_port", guest: 8100, host: 8100
+  config.vm.network "forwarded_port", guest: 35729, host: 35729
+
+  config.vm.synced_folder "../", "/project", create: true
+
+  config.vm.provider "virtualbox" do |vb|
+     vb.customize ["modifyvm", :id, "--usb", "on"]
+     #vb.customize ["modifyvm", :id, "--usbehci", "on"]
+     vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
+     vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "motorola", "--vendorid", "0x22b8"]
+     vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "samsunguinho", "--vendorid", "0x04e8"]
+    end
+end

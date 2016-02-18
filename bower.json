@@ -1,0 +1,13 @@
+{
+  "name": "app",
+  "private": false,
+  "dependencies": {
+    "bourbon": "~4.2.6",
+    "ionic": "~1.2.4",
+    "underscore": "~1.8.3",
+    "moment": "~2.11.1",
+    "ngstorage": "~0.3.10",
+    "ngCordova": "~0.1.23-alpha",
+    "angular-ui-mask": "^1.7.2"
+  }
+}
