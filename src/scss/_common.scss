@@ -1,5 +1,3 @@
-// General reset styles
-
 * {
   color: $content-color;
 }
@@ -194,4 +192,49 @@ ion-spinner.spinner-on-load {
       color: inherit;
     }
   }
+}
+
+.layouts-view .layouts-functionalities {
+  .item {
+    .icon:first-child {
+      color: $layouts-icon-color;
+    }
+
+    .title {
+      font-weight:500;
+    }
+
+    .description {
+      color: lighten($content-color, 30%);
+    }
+  }
+}
+
+.search {
+  .item, .item-content p {
+    white-space: normal !important;
+  }
+}
+
+.forms-view
+{
+  ion-content
+  {
+    -webkit-overflow-scrolling: touch !important;
+    overflow: scroll !important;
+  }
+}
+
+.item-input-inset .item-input-wrapper input {
+  width: 100%;
+}
+
+// Override Ionic styles
+.clearfix:before,
+.clearfix:after {
+  content:"";
+  display:table;
+}
+.clearfix:after {
+  clear:both;
 }

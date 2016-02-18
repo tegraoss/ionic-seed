@@ -3,7 +3,7 @@
 
   angular.module('app.config', [])
 
-  .constant('APP_NAME', 'Evento')
+  .constant('APP_NAME', 'Tegra Ionic Seed')
     .constant('VERSION', {
       number: '0.0.0',
       date: '01/01/1970'

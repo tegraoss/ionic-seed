@@ -1,34 +1,6 @@
-// Include Sass mixins
-@import "utils/mixins";
-
-// Include Theme variables
-@import "common/theme.variables";
-// Include Ionic override variables
-@import "utils/override_variables";
-
-// Include Bourbon
 @import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon";
-// Include all of Ionic
 @import "../../bower_components/ionic/scss/ionic";
-
-// Include Ionic override styles
-@import "utils/override_styles";
-
-// Include project Sass variables
-@import "common/common.variables";
-@import "auth/auth.variables";
-@import "sidemenu/side-menu.variables";
-@import "layouts/layouts.variables";
-
-// Include custom styles
-@import "common/common.styles";
-@import "auth/auth.styles";
-@import "auth/walkthrough.styles";
-@import "auth/login.styles";
-
-@import "sidemenu/side-menu.styles";
-
-@import "layouts/layouts.styles";
-@import "layouts/slider.styles";
-
-@import "forms/forms.styles";
+@import '_mixins';
+@import '_variables';
+@import '_common';
+@import '_side-menu';

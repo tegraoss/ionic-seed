@@ -1,3 +1,28 @@
+$theme-color-1: #387ef5;
+$theme-color-2: #1d488b;
+$theme-color-3: #3E454C;
+$layouts-icon-color: $theme-color-2;
+
+$pre-img-ratios: ();
+$top-bar-bg: $theme-color-2;
+$top-bar-color: #FFFFFF;
+$loading-color: #FFFFFF;
+$loading-background-color: rgba(#444444, .9);
+$content-bg: #EAEAEA;
+$content-color: #444444;
+
+$main-menu-bg: $theme-color-3;
+$main-menu-color: #FFFFFF;
+$menu-user-img-width: 10vw;
+$menu-user-img-ratio: 1 1;
+$pre-img-ratios: append($pre-img-ratios, $menu-user-img-ratio);
+$pre-img-bg: rgba(lighten(#666666, 15%), .25);
+$spinner-size: 50px;
+$spinner-svg-size: 28px;
+$spinner-color: #FFFFFF;
+$multi-bg: darken(#666666, 30%);
+$overlay-bg: darken(#fcfcfc, 80%);
+
 /*
 To customize the look and feel of Ionic, you can override the variables
 in ionic's _variables.scss file.
@@ -13,7 +38,6 @@ $positive:                        $theme-color-1 !default;
 $assertive:                       $theme-color-2 !default;
 // $royal:                           #886aea !default;
 // $dark:                            #444 !default;
-
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../fonts" !default;
