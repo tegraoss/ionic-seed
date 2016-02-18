@@ -8,6 +8,7 @@
       number: '0.0.0',
       date: '01/01/1970'
     })
+    .constant('API', 'https://sabesp-api.herokuapp.com/v2')
     .config(['$ionicConfigProvider', ($ionicConfigProvider) => {
       $ionicConfigProvider.scrolling.jsScrolling(false);
 

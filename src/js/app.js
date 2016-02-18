@@ -12,6 +12,7 @@
     'app.views',
     'app.directives',
     'app.factories',
+    'app.services',
     'app.filters'
   ])
 

@@ -13,7 +13,13 @@
 
   }])
 
-  .controller('startCtrl', [() => {
+  .controller('startCtrl', ['$scope', 'Loader', 'Sabesp', ($scope, Loader, Sabesp) => {
+
+    $scope.data = [];
+
+    Loader('Carregando dados da Sabesp', Sabesp.listAll()).then((data) => {
+      $scope.data = data;
+    });
 
   }]);
 
