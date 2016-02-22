@@ -47,9 +47,8 @@ gulp.task('sass', ['fonts'], () =>
   gulp.src('./src/scss/ionic.app.scss')
     .pipe(sourcemaps.init())
       .pipe(sass({
-        errLogToConsole: true,
         outputStyle: 'compressed'
-      }))
+      }).on('error', sass.logError))
     .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('./www/css/'))
 );
