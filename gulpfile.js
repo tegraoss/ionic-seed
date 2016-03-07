@@ -71,7 +71,7 @@ gulp.task('js', ['lint', 'templatecache'], () =>
       .pipe(concat('app.min.js'))
       .pipe(babel({
         presets: ['es2015']
-      }))
+      }).on('error', console.log))
       //.pipe(uglify())
     .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('./www/js'))
