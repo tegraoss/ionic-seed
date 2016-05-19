@@ -68,10 +68,10 @@ rm "/tmp/platform_tools.zip"
 # Install Apache Cordova, Ionic and some libs
 npm update -g
 
-npm install -g cordova@6.0.0
+npm install -g cordova@6.1.1
 npm install -g ionic@1.7.14
 npm install -g jshint@2.8.0
 npm install -g gulp@3.9.1
-npm install -g bower@1.7.7
+npm install -g bower@1.7.9
 
 sudo -H -u vagrant bash -c '/bin/bash /project/vagrant/setup.sh'

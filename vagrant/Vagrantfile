@@ -14,10 +14,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "../", "/project", create: true
 
   config.vm.provider "virtualbox" do |vb|
+     #vb.name = "ionic-seed"
      vb.customize ["modifyvm", :id, "--usb", "on"]
      #vb.customize ["modifyvm", :id, "--usbehci", "on"]
      vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
      vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "motorola", "--vendorid", "0x22b8"]
+     vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "motorolaD3", "--vendorid", "0x0bb4"]
      vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "samsunguinho", "--vendorid", "0x04e8"]
+     vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "xaiomi", "--vendorid", "0x2717"]
     end
 end
