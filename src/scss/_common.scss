@@ -33,15 +33,7 @@
     }
   }
 }
-// Preload images aux styles (ratios)
-// Auto generate ratios for the whole app (see: http://stackoverflow.com/a/18120181/1116959)
-@each $ratio in $pre-img-ratios {
-  .pre-img._#{nth($ratio, 1)}_#{nth($ratio, 2)} {
-    // Conserve aspect ratio (see: http://stackoverflow.com/a/10441480/1116959)
-    width: 100%;
-    padding-bottom: #{(nth($ratio, 2) / nth($ratio, 1)) * 100}%;
-  }
-}
+
 
 .pre-img {
   position: relative;
